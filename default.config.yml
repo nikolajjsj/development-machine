@@ -1,0 +1,60 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_osx: true
+configure_ubuntu: false
+
+dotfiles_repo: https://github.com/nikolajjsj/dotfiles.git
+dotfiles_repo_local_destination: ~/code/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages:
+  - git
+  - go
+  - gopls
+  - nvm
+  - vim
+  - neovim
+  - htop
+  - exa
+  - fd
+  - fzf
+  - luajit
+  - ripgrep
+  - tmux
+  - starship
+# homebrew_taps:
+#   - homebrew/core
+#   - homebrew/cask
+homebrew_cask_apps:
+  - alfred
+  - appcleaner
+  - spotify
+  - visual-studio-code
+  - amethyst
+  - kitty
+  - docker
+  - firefox
+  - google-chrome
+  - slack
+
+apt_packages:
+  - git
+  - go
+  - gopls
+  - vim
+  - htop
+  - exa
+  - tmux
+  - kitty
+
+npm_packages: []
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
