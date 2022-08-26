@@ -4,6 +4,7 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: true
 configure_osx: true
 configure_ubuntu: false
+configure_fedora: false
 
 dotfiles_repo: https://github.com/nikolajjsj/dotfiles.git
 dotfiles_repo_local_destination: ~/code/dotfiles
@@ -53,6 +54,21 @@ apt_packages:
   - exa
   - tmux
   - kitty
+
+dnf_packages:
+  - git
+  - go
+  - gopls
+  - vim
+  - neovim
+  - htop
+  - exa
+  - tmux
+  - kitty
+  - starship
+  - ripgrep
+  - luajit
+  - bat
 
 npm_packages: []
 

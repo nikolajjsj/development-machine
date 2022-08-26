@@ -26,3 +26,7 @@
     - import_tasks: tasks/ubuntu.yml
       when: configure_ubuntu
       tags: ['osx']
+    
+    - import_tasks: tasks/fedora.yml
+      when: configure_fedora
+      tags: ['fedora']
