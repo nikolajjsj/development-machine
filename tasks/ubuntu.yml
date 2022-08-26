@@ -1,0 +1,5 @@
+---
+- name: Ansible apt install nginx
+  apt:
+    name: "{{apt_packages}}"
+    state: present

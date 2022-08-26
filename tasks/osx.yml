@@ -1,0 +1,10 @@
+---
+- name: Install Homebrew formulas
+  homebrew: 
+    name: "{{homebrew_installed_packages}}"
+    state: present
+
+- name: Install Homebrew casks
+  homebrew: 
+    name: "{{homebrew_cask_apps}}"
+    state: present

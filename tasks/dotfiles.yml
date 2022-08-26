@@ -1,0 +1,43 @@
+---
+- name: Clone dotfiles repo
+  git:
+    repo: https://github.com/nikolajjsj/dotfiles.git
+    dest: "{{dotfiles_repo_local_destination}}"
+    clone: yes
+    update: yes
+
+- name: Symbolic link - nvim
+  file:
+    src: "{{dotfiles_repo_local_destination}}/nvim"
+    path: "~/.config/nvim"
+    state: link
+
+- name: Symbolic link - kitty
+  file:
+    src: "{{dotfiles_repo_local_destination}}/kitty.conf"
+    path: "~/.config/kitty/kitty.conf"
+    state: link
+
+- name: Symbolic link - zsh
+  file:
+    src: "{{dotfiles_repo_local_destination}}/.zshrc"
+    path: "~/.zshrc"
+    state: link
+
+- name: Symbolic link - bash
+  file:
+    src: "{{dotfiles_repo_local_destination}}/.bashrc"
+    path: "~/.bashrc"
+    state: link
+
+- name: Symbolic link - tmux
+  file:
+    src: "{{dotfiles_repo_local_destination}}/.tmux.conf"
+    path: "~/.tmux.conf"
+    state: link
+
+- name: Symbolic link - tmux
+  file:
+    src: "{{dotfiles_repo_local_destination}}/.gitconfig"
+    path: "~/.gitconfig"
+    state: link
